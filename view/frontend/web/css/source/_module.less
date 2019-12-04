@@ -1,0 +1,122 @@
+.stickyCart {
+  position: fixed;
+  background-color: #000000;
+  width:100%;
+  bottom:0;
+  height: 90px;
+  z-index: 99;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  .stickyChild{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 90px;
+        #parentQtySticky{
+          height:62px;
+        }
+        #timerSticky{
+            position: relative;
+        }
+        .clSticky{
+        padding: 10px;
+        #btnSticky:hover{
+            background-color: #b59677;
+            color:#fff;
+          }
+          .btnCustom:hover{
+            background-color: #b59677;
+            color: #fff;
+          }
+          .stickyProductName{
+            color: #eee;
+          }
+          #btnSticky{
+            background-color: transparent;
+            height: 42px;
+            border-color: #fff;
+          }
+
+          .btnCustom{
+            background-color: transparent;
+            height: 42px;
+            border-color: #fff;
+          }
+          .imgBorder{
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            border: solid 1px #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+              .borderImg{
+                width:60px;
+                height: 60px;
+                display: inline-block;
+                vertical-align: middle;
+                border-radius: 50%;
+                overflow: hidden;
+                  .stickyImg{
+                    width:100%;
+                    max-width: 100%;
+                  }
+              }
+          }
+      }
+    }
+
+}
+.alo-count-down{
+  position: static;
+}
+
+@media only screen and (max-width: 767px) {
+  .contentHide{
+    display: none;
+  }
+  .contentShow #btnSticky{
+    width: 100%;
+  }
+}
+.quantity input {
+  background-color: transparent;
+  color: #eee;
+  height: 42px;
+  float: left;
+  width: 5em;
+}
+.quantity input:focus {
+  outline: 0;
+}
+.quantity-nav {
+  float: left;
+  position: relative;
+  height: 42px;
+}
+.quantity-button {
+  cursor: pointer;
+  border-left: 1px solid #eee;
+  width: 20px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.7;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.quantity-button.quantity-up {
+  position: absolute;
+  color:#eee;
+  border-bottom: 1px solid #eee;
+}
+.quantity-button.quantity-down {
+  position: absolute;
+  color:#eee;
+  bottom: 1px;
+}

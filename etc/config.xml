@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <stickycart>
+            <addtocart_bottom>
+                <active_addtocart_bottom>1</active_addtocart_bottom>
+                <height_scroll>630</height_scroll>
+            </addtocart_bottom>
+        </stickycart>
+    </default>
+</config>
