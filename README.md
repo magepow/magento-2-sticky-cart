@@ -19,7 +19,7 @@ Run the following command in Magento 2 root folder:
 Go to `Admin Panel > Stores > Settings > Configuration > Magepow > Stickycart`
 ![enable-module-img](https://github.com/magepow/stickycart/blob/master/media/enable.PNG)
 
-Select `Yes` option in order to allow customers to sign in quickly via social channels they are using.
+Select `Yes` to enable module.
 #### Setting Sticky add to cart
 Go to `Admin Panel > Stores > Settings > Configuration > Magepow > Stickycart`
 ![config-module-img](https://github.com/magepow/stickycart/blob/master/media/config.PNG)
