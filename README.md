@@ -11,7 +11,7 @@ Run the following command in Magento 2 root folder:
 
 `php bin/magento setup:upgrade`
 
-`php bin/magento setup:static-content:deploy`
+`php bin/magento setup:static-content:deploy -f`
 ## 2. Sticky add to cart user guide
 **Magepow sticky add to cart** provides the customer with a hassle-free shopping experience. The product's function allows the customer to quickly add the product to the cart without scrolling. So your customer can get information about the product quickly. Using configuration options admin can enable/disable sticky bar features at any time. Admin can custom height from header until sticky add to cart appears.
 ### General Configuration
