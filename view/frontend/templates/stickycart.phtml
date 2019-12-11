@@ -13,7 +13,6 @@
   $currentProduct = $block->getCurrentProduct();
   $id = $currentProduct->getId();
   $_productStock = $block->getStockItem($id);
-  $timer = $helper->getTimer($currentProduct);
   $imageUrl = $this->helper('Magento\Catalog\Helper\Image')
                     ->init($currentProduct, 'product_base_image')
                     ->constrainOnly(TRUE)
@@ -27,11 +26,7 @@
     <div class="stickyChild">
     <div class="contentHide">
     <div class="clSticky" id="timerSticky">
-      <?php if($timer): ?>
-      <?php echo $timer; ?>
-      <?php else: ?>
       <div class="stickyProductName"><?php echo $block->escapeHtml(__($currentProduct->getName())) ?></div>
-      <?php endif; ?>
       </div>
     </div>
     <div class="contentHide">
