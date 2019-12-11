@@ -27,6 +27,7 @@ Go to `Admin Panel > Stores > Settings > Configuration > Magepow > Stickycart`
 You can customize the position of the sticky add to cart appears in the height from the header to the footer.
 ### This Is Result In Frontend
 ![result-module-img](https://github.com/magepow/stickycart/blob/master/media/ezgif-2-a64cab6485a1.gif)
-[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)]()
+[![Latest Stable Version](https://poser.pugx.org/magepow/magento2-stickycart/v/stable)](https://packagist.org/packages/magepow/magento2-stickycart)
+[![Total Downloads](https://poser.pugx.org/magepow/magento2-stickycart/downloads)](https://packagist.org/packages/magepow/magento2-stickycart)
 
 
