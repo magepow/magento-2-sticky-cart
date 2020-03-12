@@ -1,11 +1,7 @@
 {
     "name": "magepow/stickycart",
     "description": "Magepow Sticky Cart",
-    "suggest": {
-        "magento/module-cookie": "100.1.*"
-    },
     "type": "magento2-module",
-    "version": "1.0.0",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
