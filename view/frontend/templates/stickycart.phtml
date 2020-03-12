@@ -1,3 +1,4 @@
+
 <?php
 /*
  * @category: Magepow
@@ -6,60 +7,72 @@
  * @author: MichaelHa
  * @create date: 2019-07-15 17:19:50
  * @LastEditors: MichaelHa
- * @LastEditTime: 2019-07-23 21:18:27
+ * @LastEditTime: 2020-03-12 21:18:27
  */
-  $helper = $this->helper('Magepow\Stickycart\Helper\Data');
-  $heightScroll = $helper->getHeightScroll();
-  $currentProduct = $block->getCurrentProduct();
-  $id = $currentProduct->getId();
-  $_productStock = $block->getStockItem($id);
-  $imageUrl = $this->helper('Magento\Catalog\Helper\Image')
-                    ->init($currentProduct, 'product_base_image')
-                    ->constrainOnly(TRUE)
-                    ->keepAspectRatio(TRUE)
-                    ->keepTransparency(TRUE)
-                    ->keepFrame(FALSE)
-                    ->resize(80, 80)->getUrl();
+
+/** @var $block \Magento\Catalog\Block\Product\View */
+
+$_product = $block->getProduct();
+if ( !$_product->isSaleable() ){
+  return;
+}
+$buttonTitle = __('Add to Cart');
+if ($_product->getTypeId() == 'bundle'){
+  $buttonTitle = __('Customize and Add to Cart');
+}
+$helper        = $this->helper('Magepow\Stickycart\Helper\Data');
+$_imageHelper  = $this->helper('Magento\Catalog\Helper\Image');
+$heightScroll  = $helper->getHeightScroll();
+$widthtImage   = $helper->getWidthImage();
+$heightImage   = $helper->getHeightImage();
+$imageUrl      = $_imageHelper->init($_product, 'product_base_image')
+                ->constrainOnly(TRUE)
+                ->keepAspectRatio(TRUE)
+                ->keepTransparency(TRUE)
+                ->keepFrame(FALSE)
+                ->resize($widthtImage, $widthtImage)->getUrl();
 ?>
-<?php if($_productStock->getIsInStock()): ?>
-  <div class="stickyCart">
-    <div class="stickyChild">
+<div class="stickyCart">
+  <div class="stickyChild">
     <div class="contentHide">
-    <div class="clSticky" id="timerSticky">
-      <div class="stickyProductName"><?php echo $block->escapeHtml(__($currentProduct->getName())) ?></div>
+      <div class="clSticky" id="timerSticky">
+        <div class="stickyProductName"><?php echo $block->escapeHtml($_product->getName()) ?></div>
       </div>
     </div>
     <div class="contentHide">
-    <div class="clSticky"><div class="imgBorder"><div class="borderImg"><img class="stickyImg" src="<?php echo $imageUrl; ?>"></div></div></div></div>
-    <div class="contentHide">
-    <div class="clSticky" id="parentQtySticky">
-      <?php if ($currentProduct->getTypeId() == 'grouped'): ?>
-      <div class="quantity">
-        <input type="number" min="1" value="1" id="qtyGrouped">
-      </div>
-      <?php else: ?>
-        <div class="quantity">
-        <input type="number" min="1" value="1" id="qtySticky">
-      </div>
-        <?php endif; ?>
+      <div class="clSticky">
+        <div class="imgBorder">
+          <div class="borderImg">
+            <img class="stickyImg" src="<?php echo $imageUrl; ?>">
+          </div>
+        </div>
       </div>
     </div>
-    <?php if ($currentProduct->getTypeId() == 'bundle'): ?>
-    <div class="contentShow"><div class="clSticky"><button class="btnCustom">Customize</button></div></div>
-      <?php else: ?>
-    <div class="contentShow"><div class="clSticky"><button id="btnSticky">Add To Cart</button>
-    </div></div>
-  <?php endif; ?>
+    <div class="contentHide">
+      <div class="clSticky" id="parentQtySticky">
+          <div class="quantity">
+            <input  type="number" 
+                    min="1" 
+                    value="<?= $block->getProductDefaultQty() * 1 ?>"
+                    title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
+                    data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
+                    id="qtySticky"
+            >
+          </div>
+      </div>
+    </div>
+    <div class="contentShow">
+      <div class="clSticky">
+        <button id="btnSticky" title="<?= $block->escapeHtmlAttr($buttonTitle) ?>"><span><?= $block->escapeHtml($buttonTitle) ?></span></button>
+      </div>
+    </div>
   </div>
-  </div>
-<?php endif; ?>
+</div>
 <?php
 $formData = [
-    'stickyCart'    				    =>  '.stickyCart',
-    'qtySticky'						      =>	'#qtySticky',
-    'btnCustom'                 =>  '#btnCustom',
+    'stickyCart'                =>  '.stickyCart',
+    'qtySticky'                 =>  '#qtySticky',
     'quantity'                  =>  '.quantity',
-    'qtyGrouped'                =>  '#qtyGrouped',
     'btnSticky'                 =>  '#btnSticky'
 ];
 $stickyData = $this->helper('Magento\Framework\Json\Helper\Data')->jsonEncode($formData);
@@ -69,9 +82,9 @@ $stickyData = $this->helper('Magento\Framework\Json\Helper\Data')->jsonEncode($f
         "*": {
             "magepowStickycart": {
             "jsonData":<?php /* @noEscape */ echo $stickyData; ?>,
-            "ScrollHeight": <?php   echo $heightScroll; ?>
+            "typeProduct": "<?php /* @noEscape */ echo $_product->getTypeId(); ?>",
+            "scrollHeight": <?php   echo $heightScroll; ?>
             }
         }
     }
 </script>
-

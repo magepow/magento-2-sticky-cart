@@ -2,8 +2,10 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="before.body.end">
-            <block class="Magepow\Stickycart\Block\Product\Stickycart"  name="stickycart"
-                   template="Magepow_Stickycart::stickycart.phtml" group="detailed_info" ifconfig="stickycart/addtocart_bottom/active_addtocart_bottom">
+            <block class="\Magento\Catalog\Block\Product\View" name="stickycart" group="detailed_info"
+            		template="Magepow_Stickycart::stickycart.phtml"
+                   	ifconfig="stickycart/general/enabled"
+                   >
             </block>
         </referenceBlock>
     </body>

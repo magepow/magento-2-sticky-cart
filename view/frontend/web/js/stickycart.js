@@ -5,85 +5,93 @@ define([
     'use strict';
     $.widget('mage.magepowStickycart', {
         options: {
-            ScrollHeight:0
+            scrollHeight 	: 0,
+            typeProduct 	: 'simple'
         },
-      _create: function () {
-        var options = this.options;
-        $(document).scroll(function() {
-          var y = $(this).scrollTop();
-          if (y > options.ScrollHeight) {
-            $(".stickyCart").fadeIn("fast");
-          } else {
-            $(".stickyCart").fadeOut("fast");
-          }
-        });
+	    _create: function () {
+	        var options = this.options;
+	        var buttonAddToCart = $('#product-addtocart-button');
+	        var buttonBundle 	= $('#bundle-slide');
+	        var buttonSticky 	= $('#btnSticky');
+	        if( buttonBundle.length ){
+	        	var buttonAction = buttonBundle;
+	        	buttonSticky.addClass('customize');
+	        } else {
+	        	var buttonAction = buttonAddToCart;
+	        }
+	        if(!buttonAction.length) return;
+	        var scrollHeight 	= options.scrollHeight ? options.scrollHeight : buttonAction.position().top;
+	        var stickyCart      = $(".stickyCart");
+	        $(document).scroll(function() {
+				var y = $(this).scrollTop();
+				if (y > scrollHeight) {
+					stickyCart.fadeIn("fast");
+				} else {
+					stickyCart.fadeOut("fast");
+				}
+	        });
 
-        $('#qtySticky').change(function(){
-          $('#qty').val(this.value);
-        });
-        $('#qty').change(function(){
-          $('#qtySticky').val(this.value);
-        });
+	        var qtySticky 	= $('#qtySticky');
+	        var groupQty 	= $('.grouped .qty input[type="number"]');
+	        var qty 		= $('#qty');
+	        qty.change(function(){
+	        	qtySticky.val(this.value);
+	        });	
+	        qtySticky.change(function(){
+	        	if(groupQty.length){
+	        		groupQty.val(this.value);
+	        	}
+	        	qty.val(this.value);
+	        });        
+	        groupQty.change(function() {
+	        	qtySticky.val(this.value);
+	        });
 
-        $('#qtyGrouped').change(function(){
-          $('form .data.grouped tr:first-child .qty').val(this.value);
-        });
+	        buttonSticky.click(function() {
+	        	var $this = $(this);
+	        	$this.text(buttonAddToCart.text());
+	        	$this.attr("disabled", "disabled");
+	        	setTimeout(function() {
+	        		$this.removeAttr("disabled");
+	          	}, 1500);
+	          	if($this.hasClass('customize')){
+	          		buttonBundle.click();
+	          		buttonSticky.removeClass('customize');
+	          	}else {
+	            	buttonAddToCart.click();
+	          	}
+	        });
 
-        $( "input[type='number']" ).change(function() {
-          $('#qtyGrouped').val(this.value);
-        });
+	        $('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.stickyCart .quantity input');
+	        $('.stickyCart .quantity').each(function() {
+				var spinner = $(this),
+				input = spinner.find('input[type="number"]'),
+				btnUp = spinner.find('.quantity-up'),
+				btnDown = spinner.find('.quantity-down'),
+				min = input.attr('min'),
+				max = input.attr('max');
+	          	btnUp.click(function() {
+	            var oldValue = parseFloat(input.val());
+	            if (oldValue >= max) {
+	              var newVal = oldValue;
+	            } else {
+	              var newVal = oldValue + 1;
+	            }
+	            spinner.find("input").val(newVal);
+	            spinner.find("input").trigger("change");
+	          });
 
-        $('#btnSticky').click(function() {
-          var $this = $(this)
-          $this.attr("disabled", "disabled");
-          setTimeout(function() {
-            $this.removeAttr("disabled");
-          }, 1500);
-            $('#product-addtocart-button').click();
-        });
-
-        var clicks = 0;
-        $('.btnCustom').click(function() {
-          if (clicks == 0){
-              $('#bundle-slide').click(); 
-              $(this).text("Add To Cart");
-              } else{
-              $('#product-addtocart-button').click();
-            }
-          ++clicks;
-        });
-
-
-        $('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
-        $('.quantity').each(function() {
-          var spinner = $(this),
-          input = spinner.find('input[type="number"]'),
-          btnUp = spinner.find('.quantity-up'),
-          btnDown = spinner.find('.quantity-down'),
-          min = input.attr('min'),
-          max = input.attr('max');
-          btnUp.click(function() {
-            var oldValue = parseFloat(input.val());
-            if (oldValue >= max) {
-              var newVal = oldValue;
-            } else {
-              var newVal = oldValue + 1;
-            }
-            spinner.find("input").val(newVal);
-            spinner.find("input").trigger("change");
-          });
-
-          btnDown.click(function() {
-            var oldValue = parseFloat(input.val());
-            if (oldValue <= min) {
-              var newVal = oldValue;
-            } else {
-              var newVal = oldValue - 1;
-            }
-            spinner.find("input").val(newVal);
-            spinner.find("input").trigger("change");
-          });
-        });
+	          btnDown.click(function() {
+	            var oldValue = parseFloat(input.val());
+	            if (oldValue <= min) {
+	              var newVal = oldValue;
+	            } else {
+	              var newVal = oldValue - 1;
+	            }
+	            spinner.find("input").val(newVal);
+	            spinner.find("input").trigger("change");
+	          });
+	        });
       }
     });
   return $.mage.magepowStickycart;
