@@ -27,6 +27,43 @@ Go to `Admin Panel > Stores > Settings > Configuration > Magepow > Stickycart`
 You can customize the position of the sticky add to cart appears in the height from the header to the footer.
 ### This Is Result In Frontend
 ![result-module-img](https://github.com/magepow/stickycart/blob/master/media/ezgif-2-a64cab6485a1.gif)
+
+**Free list extensions**
+
+* [Magento 2 Recent Sales Notification](https://magepow.com/magento-2-recent-sales-notification.html)
+
+* [Magento Categories Extension](https://magepow.com/magento-categories-extension.html)
+
+* [Magento Sticky Cart](https://magepow.com/magento-sticky-cart.html)
+
+**Premium list extensions**
+
+* [Magento Speed Optimizer](https://magepow.com/magento-speed-optimizer.html)
+
+* [Magento 2 Mutil Translate](https://magepow.com/magento-multi-translate.html)
+
+* [Magento 2 Instagram Integration](https://magepow.com/magento-2-instagram.html)
+
+* [Lookbook Pin Products](https://magepow.com/lookbook-pin-products.html)
+
+**Featured Magento services**
+
+* [PSD to Magento 2 Theme Conversion](https://magepow.com/psd-to-magento-theme-conversion.html)
+
+* [Magento Speed Optimization Service](https://magepow.com/magento-speed-optimization-service.html)
+
+* [Magento Security Patch Installation](https://magepow.com/magento-security-patch-installation.html)
+
+* [Magento Website Maintenance Service](https://magepow.com/website-maintenance-service.html)
+
+* [Magento Professional Installation Service](https://magepow.com/professional-installation-service.html)
+
+* [Magento Upgrade Service](https://magepow.com/magento-upgrade-service.html)
+
+* [Customization Service](https://magepow.com/customization-service.html)
+
+* [Hire Magento Developer](https://magepow.com/hire-magento-developer.html)
+
 [![Latest Stable Version](https://poser.pugx.org/magepow/stickycart/v/stable)](https://packagist.org/packages/magepow/stickycart)
 [![Total Downloads](https://poser.pugx.org/magepow/stickycart/downloads)](https://packagist.org/packages/magepow/stickycart)
 
