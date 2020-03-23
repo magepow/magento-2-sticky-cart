@@ -22,11 +22,14 @@ define([
 	        if(!buttonAction.length) return;
 	        var scrollHeight 	= options.scrollHeight ? options.scrollHeight : buttonAction.position().top;
 	        var stickyCart      = $(".stickyCart");
+	        var body 			= $('body');
 	        $(document).scroll(function() {
 				var y = $(this).scrollTop();
 				if (y > scrollHeight) {
+					body.addClass('show-add-cart-bottom');
 					stickyCart.fadeIn("fast");
 				} else {
+					body.removeClass('show-add-cart-bottom');
 					stickyCart.fadeOut("fast");
 				}
 	        });
@@ -62,7 +65,6 @@ define([
 	          	}
 	        });
 
-	        $('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.stickyCart .quantity input');
 	        $('.stickyCart .quantity').each(function() {
 				var spinner = $(this),
 				input = spinner.find('input[type="number"]'),

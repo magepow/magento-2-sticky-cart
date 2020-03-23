@@ -51,19 +51,29 @@ $imageUrl      = $_imageHelper->init($_product, 'product_base_image')
     <div class="contentHide">
       <div class="clSticky" id="parentQtySticky">
           <div class="quantity">
-            <input  type="number" 
+            <input  name="qty"
+                    type="number" 
                     min="1" 
                     value="<?= $block->getProductDefaultQty() * 1 ?>"
                     title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
                     data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
                     id="qtySticky"
+                    class="qty"
             >
+            <div class="btn-plus">
+              <button  type="button" class="increase items" onclick="var result = document.getElementById('qtySticky'); var qtySticky = result.value; if( !isNaN( qtySticky )) result.value++;return false;">
+                <i class="fa fa-angle-up"></i>
+              </button>
+              <button  type="button" class="reduced items" onclick="var result = document.getElementById('qtySticky'); var qtySticky = result.value; if( !isNaN( qtySticky ) && qtySticky > 1 ) result.value--;return false;">
+                <i class="fa fa-angle-down"></i>
+              </button>  
+            </div>
           </div>
       </div>
     </div>
     <div class="contentShow">
       <div class="clSticky">
-        <button id="btnSticky" title="<?= $block->escapeHtmlAttr($buttonTitle) ?>"><span><?= $block->escapeHtml($buttonTitle) ?></span></button>
+        <button id="btnSticky" class="action button" title="<?= $block->escapeHtmlAttr($buttonTitle) ?>"><span><?= $block->escapeHtml($buttonTitle) ?></span></button>
       </div>
     </div>
   </div>
