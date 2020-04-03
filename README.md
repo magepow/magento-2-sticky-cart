@@ -1,6 +1,10 @@
 # Magento 2 Extention Sticky Add To Cart
-**Sticky cart Magento extension** (Sticky add to cart Extension) provides to customers a convenient add to cart bar so they can add products to cart, view brief of product detail (image, price, quantity,...) quickly. Therefore, *sticky cart extension* not only creates a good shopping experience for customers but also help store owners don't lose their sale (remind and "call to action" customer checkout). No longer need to scroll on back to the top after reading the detail information of product, the add to cart bar is always on visible
-## Hightlight features for sticky add to cart
+
+This Sticky Add To Cart extension for Magento 2 helps store owners make the cart always visible for easier check out. When a customer scrolls down the page, the extension will help you show the "Add to cart" bar so your customers can quickly add the product to cart or view brief of product detail such as images, price or choose the quantity, no longer need to scroll back to the top, the cart bar is always on visible. Therefore, this extension not only provides customers an extremely convenient shopping experience but also can help you increase sales, and reduce the customer ratio leaving the product or miss their checkout after reading lots of detail (remind and "call to action").
+
+The extension is very easy to use and configure. In the admin panel using configuration options, the admin can enable/disable sticky bar features at any time. Besides, the extension allows you to set the height from header util the Sticky Add To Cart appears. No coding needed and easy to custom style as well. 
+
+## Highlight features for sticky add to cart
  * When scrolling down quickly view any particular details like a product image, product name, etc.
  * This extension will increase conversion rate by encouraging customers to add products to cart or buy now button.
 ## 1. How to install Magento 2 sticky add to cart
@@ -28,7 +32,10 @@ You can customize the position of the sticky add to cart appears in the height f
 ### This Is Result In Frontend
 ![result-module-img](https://github.com/magepow/stickycart/blob/master/media/ezgif-2-a64cab6485a1.gif)
 
-**Free list extensions**
+## Detail User Guide
+* [Magento 2 Sticky Add To Cart Document](https://docs.alothemes.com/m2/extension/stickycart/)
+
+**Free Extensions List**
 
 * [Magento 2 Recent Sales Notification](https://magepow.com/magento-2-recent-sales-notification.html)
 
@@ -36,7 +43,11 @@ You can customize the position of the sticky add to cart appears in the height f
 
 * [Magento Sticky Cart](https://magepow.com/magento-sticky-cart.html)
 
-**Premium list extensions**
+* [Magento Ajax Contact](https://magepow.com/magento-ajax-contact-form.html)
+
+* [Magento Lazy Load](https://magepow.com/magento-lazy-load.html)
+
+**Premium Extensions List**
 
 * [Magento Speed Optimizer](https://magepow.com/magento-speed-optimizer.html)
 
@@ -45,6 +56,10 @@ You can customize the position of the sticky add to cart appears in the height f
 * [Magento 2 Instagram Integration](https://magepow.com/magento-2-instagram.html)
 
 * [Lookbook Pin Products](https://magepow.com/lookbook-pin-products.html)
+
+* [Magento Product Slider](https://magepow.com/magento-product-slider.html)
+
+* [Magento Product Banner](https://magepow.com/magento-banner-slider.html)
 
 **Featured Magento services**
 
@@ -63,6 +78,24 @@ You can customize the position of the sticky add to cart appears in the height f
 * [Customization Service](https://magepow.com/customization-service.html)
 
 * [Hire Magento Developer](https://magepow.com/hire-magento-developer.html)
+
+**Featured Magento Themes**
+
+* [Expert Multipurpose responsive Magento 2 Theme](https://1.envato.market/c/1314680/275988/4415?u=https://themeforest.net/item/expert-premium-responsive-magento-2-and-1-support-rtl-magento-2-/21667789)
+
+* [Gecko Premium responsive Magento 2 Theme](https://1.envato.market/c/1314680/275988/4415?u=https://themeforest.net/item/gecko-responsive-magento-2-theme-rtl-supported/24677410)
+
+* [Milano Fashion responsive Magento 2 Theme](https://1.envato.market/c/1314680/275988/4415?u=https://themeforest.net/item/milano-fashion-responsive-magento-1-2-theme/12141971)
+
+* [Electro responsive Magento 2 Theme](https://1.envato.market/c/1314680/275988/4415?u=https://themeforest.net/item/electro-responsive-magento-1-2-theme/17042067)
+
+* [Pizzaro food responsive Magento 2 Theme](https://1.envato.market/c/1314680/275988/4415?u=https://themeforest.net/item/pizzaro-food-responsive-magento-1-2-theme/19438157)
+
+* [Biolife organic responsive Magento 2 Theme](https://1.envato.market/c/1314680/275988/4415?u=https://themeforest.net/item/biolife-organic-food-magento-2-theme-rtl-supported/25712510)
+
+* [Market responsive Magento 2 Theme](https://1.envato.market/c/1314680/275988/4415?u=https://themeforest.net/item/market-responsive-magento-2-theme/22997928)
+
+* [Kuteshop responsive Magento 2 Theme](https://1.envato.market/c/1314680/275988/4415?u=https://themeforest.net/item/kuteshop-multipurpose-responsive-magento-1-2-theme/12985435)
 
 [![Latest Stable Version](https://poser.pugx.org/magepow/stickycart/v/stable)](https://packagist.org/packages/magepow/stickycart)
 [![Total Downloads](https://poser.pugx.org/magepow/stickycart/downloads)](https://packagist.org/packages/magepow/stickycart)
