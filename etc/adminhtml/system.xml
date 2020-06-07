@@ -10,21 +10,21 @@
             <resource>Magepow_Stickycart::config_stickycart</resource>
             <group id="general" translate="label" type="text" sortOrder="50" showInDefault="10" showInWebsite="1" showInStore="1">
                 <label><![CDATA[General]]></label>
-                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label><![CDATA[Enabled]]></label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="height_scroll" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10">
+                <field id="height_scroll" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10" canRestore="1">
                     <label>Height Scroll</label>
                     <comment><![CDATA[Height from the top of the web page to the appearance 'add to cart bottom' default value 0 will auto]]></comment>
                     <validate>validate-number</validate>
                 </field>
-                <field id="width_image" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="20">
+                <field id="width_image" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="20" canRestore="1">
                     <label>Width Image</label>
                     <comment><![CDATA[Width image product]]></comment>
                     <validate>validate-number</validate>
                 </field>
-                <field id="height_image" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="30">
+                <field id="height_image" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="30" canRestore="1">
                     <label>Height Image</label>
                     <comment><![CDATA[Height image product]]></comment>
                     <validate>validate-number</validate>
