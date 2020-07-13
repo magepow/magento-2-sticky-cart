@@ -1,6 +1,6 @@
 define([
-  "jquery",
-  "jquery/ui",
+  'jquery',
+  'jquery-ui-modules/widget'
   ], function ($) {
     'use strict';
     $.widget('mage.magepowStickycart', {
