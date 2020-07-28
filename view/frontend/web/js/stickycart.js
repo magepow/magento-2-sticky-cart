@@ -37,6 +37,14 @@ define([
 	        var qtySticky 	= $('#qtySticky');
 	        var groupQty 	= $('.grouped .qty input[type="number"]');
 	        var qty 		= $('#qty');
+	        $('#product_addtocart_form .btn-plus').on("click", '.increase, .reduced', function(e){
+	        	var qty = $(this).closest('.custom-qty').find('#qty').val();
+	        	qtySticky.val(qty);
+	        });
+	        $('.stickyCart .btn-plus').on("click", '.increase, .reduced', function(e){
+	        	var qtySticky = $(this).closest('.custom-qty').find('#qtySticky').val();
+	        	qty.val(qtySticky);
+	        });
 	        qty.change(function(){
 	        	qtySticky.val(this.value);
 	        });	
