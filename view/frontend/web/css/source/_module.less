@@ -10,56 +10,118 @@
     align-items: center;
     justify-content: center;
     .stickyChild{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 90px;
-          #parentQtySticky{
-            height:43px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 90px;
+      #parentQtySticky{
+        height:43px;
+      }
+      #timerSticky{
+          position: relative;
+      }
+      .clSticky{
+        padding: 10px;
+        .quantity {
+          width: 80px;
+          height: 40px;
+          border: 1px solid #999;
+          text-align: left;
+          margin-right: 0;
+          position: relative;
+          .input-text {
+            width: calc(~"100% - 20px");
+            border: 0;
+            border-right: 1px solid #999;
+            height: 39px;
+            background: 0 0;
+            padding: 0;
+            font-weight: 700;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+            letter-spacing: 1px;
+            line-height: 1;
+            font-family: Lato,sans-serif;
+            background-color: transparent;
           }
-          #timerSticky{
-              position: relative;
-          }
-          .clSticky{
-            padding: 10px;
-            #btnSticky:hover{
-              background-color: #b59677;
-              color:#fff;
-            }
-            .stickyProductName{
-              color: #eee;
-            }
-            #btnSticky{
-              background-color: transparent;
-              height: 42px;
-              border-color: #fff;
-            }
-            .imgBorder{
-              width: 68px;
-              height: 68px;
+        }
+        #btnSticky:hover{
+          background-color: #b59677;
+          color:#fff;
+        }
+        .stickyProductName{
+          color: #eee;
+        }
+        #btnSticky{
+          background-color: transparent;
+          height: 42px;
+          border-color: #fff;
+        }
+        .imgBorder{
+          width: 68px;
+          height: 68px;
+          border-radius: 50%;
+          border: solid 1px #eee;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+            .borderImg{
+              width:60px;
+              height: 60px;
+              display: inline-block;
+              vertical-align: middle;
               border-radius: 50%;
-              border: solid 1px #eee;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-                .borderImg{
-                  width:60px;
-                  height: 60px;
-                  display: inline-block;
-                  vertical-align: middle;
-                  border-radius: 50%;
-                  overflow: hidden;
-                    .stickyImg{
-                      width:100%;
-                      max-width: 100%;
-                    }
+              overflow: hidden;
+                .stickyImg{
+                  width:100%;
+                  max-width: 100%;
                 }
             }
         }
       }
+      .contentShow {
+        #btnSticky {
+          color: #fff;
+          border: 1px solid #ccc;
+        }
+      }
+    }
+    .btn-plus {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
 
+      .items {
+        background: transparent;
+        color: #fff;
+        border: none;
+        width: 100%;
+        .fa {
+          font-family: 'luma-icons';
+          font-style: normal;
+          font-size: 9px;
+          &.fa-angle-up {
+            &:before {
+              content: "\e61c";
+            }
+          }
+          &.fa-angle-down {
+            &:before {
+              content: "\e60f";
+            }
+          }
+        }
+      }
+      .increase {
+        border-bottom: 1px solid #999;
+      }
+    }
   }
-
+  .quantity input:focus {
+    outline: 0;
+  }
   @media only screen and (max-width: 767px) {
     .contentHide{
       display: none;
@@ -67,15 +129,5 @@
     .contentShow #btnSticky{
       width: 100%;
     }
-  }
-  .quantity input {
-    background-color: transparent;
-    color: #eee;
-    height: 42px;
-    float: left;
-    width: 5em;
-  }
-  .quantity input:focus {
-    outline: 0;
   }
 }
