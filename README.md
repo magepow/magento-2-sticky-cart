@@ -11,11 +11,12 @@ The extension is very easy to use and configure. In the admin panel using config
 ### ✓ Install sticky add to cart via composer (recommend)
 Run the following command in Magento 2 root folder:
 
-`composer require magepow/stickycart`
+```
+composer require magepow/stickycart
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy -f
+```
 
-`php bin/magento setup:upgrade`
-
-`php bin/magento setup:static-content:deploy -f`
 ## 2. Sticky add to cart user guide
 **Magepow sticky add to cart** provides the customer with a hassle-free shopping experience. The product's function allows the customer to quickly add the product to the cart without scrolling. So your customer can get information about the product quickly. Using configuration options admin can enable/disable sticky bar features at any time. Admin can custom height from header until sticky add to cart appears.
 ### General Configuration
@@ -34,6 +35,14 @@ You can customize the position of the sticky add to cart appears in the height f
 
 ## Detail User Guide
 * [Magento 2 Sticky Add To Cart Document](https://docs.alothemes.com/m2/extension/stickycart/)
+
+
+## Donation
+
+If this project help you reduce time to develop, you can give me a cup of coffee :) 
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/paypalme/alopay)
+
 
 **Free Extensions List**
 
