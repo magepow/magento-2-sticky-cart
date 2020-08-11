@@ -1,53 +1,46 @@
 & when (@media-common = true) {
   .stickyCart {
     position: fixed;
-    background-color: #000000;
-    width:100%;
-    bottom:0;
+    background: #000;
+    width: 100%;
+    bottom: 0;
     height: 90px;
     z-index: 99;
     display: none;
     align-items: center;
     justify-content: center;
-    .stickyChild{
+    .stickyChild {
       display: flex;
       align-items: center;
       justify-content: center;
       height: 90px;
-      #parentQtySticky{
-        height:43px;
+      #parentQtySticky {
+        height: 43px;
       }
-      #timerSticky{
-          position: relative;
+      #timerSticky {
+        position: relative;
       }
-      .clSticky{
+      .clSticky {
         padding: 10px;
         .quantity {
-          border: 1px solid #999;
           text-align: left;
           margin-right: 0;
           position: relative;
-          .input-text {
+          border: 1px solid #999;
+          .qty {
             width: calc(~"100% - 20px");
             border: 0;
-            border-right: 1px solid #999;
-            height: 39px;
-            background: 0 0;
+            height: 40px;
             padding: 0;
             font-weight: 700;
             font-size: 14px;
-            color: #999;
             text-align: center;
-            letter-spacing: 1px;
-            line-height: 1;
-            font-family: Lato,sans-serif;
-            background-color: transparent;
           }
         }
-        .stickyProductName{
+        .stickyProductName {
           color: #eee;
         }
-        .imgBorder{
+        .imgBorder {
           width: 68px;
           height: 68px;
           border-radius: 50%;
@@ -55,28 +48,28 @@
           display: flex;
           justify-content: center;
           align-items: center;
-            .borderImg{
-              width:60px;
-              height: 60px;
-              display: inline-block;
-              vertical-align: middle;
-              border-radius: 50%;
-              overflow: hidden;
-                .stickyImg{
-                  width:100%;
-                  max-width: 100%;
-                }
+          .borderImg {
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 50%;
+            overflow: hidden;
+            .stickyImg {
+              width: 100%;
+              max-width: 100%;
             }
+          }
         }
       }
-      #btnSticky{
+      #btnSticky {
         background-color: transparent;
         height: 42px;
         border-color: #fff;
       }
-      #btnSticky:hover{
+      #btnSticky:hover {
         background-color: #b59677;
-        color:#fff;
+        color: #fff;
       }
       .contentShow {
         #btnSticky {
@@ -90,14 +83,13 @@
       top: 0;
       right: 0;
       width: 20px;
-
       .items {
         background: transparent;
         color: #fff;
         border: none;
         width: 100%;
         .fa {
-          font-family:  @icons__font-name;
+          font-family: @icons__font-name;
           font-style: normal;
           font-size: 9px;
           &.fa-angle-up {
@@ -112,19 +104,16 @@
           }
         }
       }
-      .increase {
-        border-bottom: 1px solid #999;
-      }
     }
     .quantity input:focus {
       outline: 0;
     }
   }
   @media only screen and (max-width: 767px) {
-    .contentHide{
+    .contentHide {
       display: none;
     }
-    .contentShow #btnSticky{
+    .contentShow #btnSticky {
       width: 100%;
     }
   }

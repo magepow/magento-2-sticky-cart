@@ -38,11 +38,11 @@ define([
 	        var groupQty 	= $('.grouped .qty input[type="number"]');
 	        var qty 		= $('#qty');
 	        $('#product_addtocart_form .btn-plus').on("click", '.increase, .reduced', function(e){
-	        	var qty = $(this).closest('.custom-qty').find('#qty').val();
+	        	var qty = $(this).closest('.qty .control').find('#qty').val();
 	        	qtySticky.val(qty);
 	        });
 	        $('.stickyCart .btn-plus').on("click", '.increase, .reduced', function(e){
-	        	var qtySticky = $(this).closest('.custom-qty').find('#qtySticky').val();
+	        	var qtySticky = $(this).closest('.clSticky').find('#qtySticky').val();
 	        	qty.val(qtySticky);
 	        });
 	        qty.change(function(){
@@ -104,5 +104,5 @@ define([
 	        });
       }
     });
-  return $.mage.magepowStickycart;
+  	return $.mage.magepowStickycart;
 });
