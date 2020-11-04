@@ -22,16 +22,15 @@ php bin/magento setup:static-content:deploy -f
 ### General Configuration
 #### Enable Sticky add to cart
 Go to `Admin Panel > Stores > Settings > Configuration > Magepow > Stickycart`
-![enable-module-img](https://github.com/magepow/stickycart/blob/master/media/enable.PNG)
 
 Select `Yes` to enable module.
 #### Setting Sticky add to cart
 Go to `Admin Panel > Stores > Settings > Configuration > Magepow > Stickycart`
-![config-module-img](https://github.com/magepow/stickycart/blob/master/media/config.PNG)
+![config-module-img](https://github.com/magepow/stickycart/blob/master/media/config.png)
 
 You can customize the position of the sticky add to cart appears in the height from the header to the footer.
 ### This Is Result In Frontend
-![result-module-img](https://github.com/magepow/stickycart/blob/master/media/ezgif-2-a64cab6485a1.gif)
+![result-module-img](https://github.com/magepow/stickycart/blob/master/media/description.gif)
 
 ## Detail User Guide
 * [Magento 2 Sticky Add To Cart Document](https://docs.alothemes.com/m2/extension/stickycart/)
