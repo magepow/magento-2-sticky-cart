@@ -1,4 +1,4 @@
-# Magento 2 Extention Sticky Add To Cart
+# Magento 2 Sticky Add To Cart FREE
 
 This Sticky Add To Cart extension for Magento 2 helps store owners make the cart always visible for easier check out. When a customer scrolls down the page, the extension will help you show the "Add to cart" bar so your customers can quickly add the product to cart or view brief of product detail such as images, price or choose the quantity, no longer need to scroll back to the top, the cart bar is always on visible. Therefore, this extension not only provides customers an extremely convenient shopping experience but also can help you increase sales, and reduce the customer ratio leaving the product or miss their checkout after reading lots of detail (remind and "call to action").
 
