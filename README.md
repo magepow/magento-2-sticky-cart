@@ -7,7 +7,7 @@ With Magepow Stickycart, when scrolling down, the customer can quickly view any 
 
 ## Highlight features for Magento Sticky add to cart
 1: Easy to install and customize. With the admin panel set up to be customer friendly, you can use Magepow_Stickycart without any coding knowledge.
-2: Enabled/Divenabled the features of the 'Sticky add to cart' bar quickly.
+2: Enabled/Divenabled the features of the 'Sticky add to cart' bar quickly
 3: Ability to customize 'Height Scroll' (Height from the top of the web page to the appearance 'add to cart bottom' default value 0 will auto)
 4: Ability to customize the size of product images on the 'Sticky add to cart' bar
 5: Responsive design for devices: mobile, tablet, laptop. It will recalculate itself based on the original layout..
