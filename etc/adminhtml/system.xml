@@ -4,7 +4,7 @@
         <tab id="magepow" translate="label" sortOrder="89">
              <label><![CDATA[Magepow]]></label>
         </tab>
-        <section id="stickycart" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="magepow_stickycart" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
             <label><![CDATA[Sticky Cart]]></label>
             <tab>magepow</tab>
             <resource>Magepow_Stickycart::config_stickycart</resource>

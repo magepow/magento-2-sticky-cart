@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <stickycart>
+        <magepow_stickycart>
             <general>
                 <enabled>1</enabled>
                 <width_image>80</width_image>
                 <height_image>80</height_image>
                 <height_scroll>0</height_scroll>
             </general>
-        </stickycart>
+        </magepow_stickycart>
     </default>
 </config>
