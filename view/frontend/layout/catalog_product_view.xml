@@ -4,7 +4,7 @@
         <referenceBlock name="before.body.end">
             <block class="Magento\Catalog\Block\Product\View" name="stickycart" group="detailed_info"
             		template="Magepow_Stickycart::stickycart.phtml"
-                   	ifconfig="stickycart/general/enabled"
+                   	ifconfig="magepow_stickycart/general/enabled"
                    >
             </block>
         </referenceBlock>
