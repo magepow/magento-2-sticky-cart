@@ -45,6 +45,7 @@ You can customize the position of the sticky add to cart appears in the height f
 ## Detail User Guide
 * [Magento 2 Sticky Add To Cart Document](https://docs.alothemes.com/m2/extension/stickycart/)
 
+* [How to use Magento 2 Sticky add to cart free](https://www.youtube.com/watch?v=GjxPFJkxjSo) 
 
 ## Donation
 
