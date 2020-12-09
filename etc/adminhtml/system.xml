@@ -29,6 +29,12 @@
                     <comment><![CDATA[Height image product]]></comment>
                     <validate>validate-number</validate>
                 </field>
+
+                <field id="exclude_products" translate="label" type="multiselect" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Exlude Products</label>
+                    <comment><![CDATA[Select products not show sticky cart]]></comment>
+                    <source_model>Magepow\Stickycart\Model\Config\Productlist</source_model>
+                </field>
             </group>
 
         </section>

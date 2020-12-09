@@ -1,23 +1,13 @@
-# Magento 2 Sticky add to cart FREE (Magepow Stickycart)
-Magento 2 Sticky add to cart extension provides for the product page a convenient stick, help customers can quickly add a product to cart without going back to the top.
-## Details
-**Magento 2 Sticky add to cart Free by Magepow** helps store owners make the cart always visible for easier check out. When a customer scrolls down the page, the extension will help you show the "Add to cart" bar so your customers can quickly add the product to cart or view brief of product detail such as images, price or choose the quantity, no longer need to scroll back to the top, the cart bar is always on visible. Therefore, this extension not only provides customers an extremely convenient shopping experience but also can help you increase sales, and reduce the customer ratio leaving the product or miss their checkout after reading lots of detail (remind and "call to action").
+# Magento 2 Extention Sticky Add To Cart
 
-With Magepow Stickycart, when scrolling down, the customer can quickly view any particular details like a product image, product name, etc. With a simple design, the “Sticky add to cart” bar is neatly displayed on the product page, as an elegant reminder without disturbing other layouts on the product page. This extension will increase the conversion rate by encouraging customers to add products to the cart or buy now button.
+This Sticky Add To Cart extension for Magento 2 helps store owners make the cart always visible for easier check out. When a customer scrolls down the page, the extension will help you show the "Add to cart" bar so your customers can quickly add the product to cart or view brief of product detail such as images, price or choose the quantity, no longer need to scroll back to the top, the cart bar is always on visible. Therefore, this extension not only provides customers an extremely convenient shopping experience but also can help you increase sales, and reduce the customer ratio leaving the product or miss their checkout after reading lots of detail (remind and "call to action").
 
-## Highlight features for Magento Sticky add to cart
-1: Easy to install and customize. With the admin panel set up to be customer friendly, you can use Magepow_Stickycart without any coding knowledge.
+The extension is very easy to use and configure. In the admin panel using configuration options, the admin can enable/disable sticky bar features at any time. Besides, the extension allows you to set the height from header util the Sticky Add To Cart appears. No coding needed and easy to custom style as well. 
 
-2: Enabled/Divenabled the features of the 'Sticky add to cart' bar quickly
-
-3: Ability to customize 'Height Scroll' (Height from the top of the web page to the appearance 'add to cart bottom' default value 0 will auto)
-
-4: Ability to customize the size of product images on the 'Sticky add to cart' bar
-
-5: Responsive design for devices: mobile, tablet, laptop. It will recalculate itself based on the original layout..
-
-
-## 1. How to install Magento 2 sticky add to cart Free
+## Highlight features for sticky add to cart
+ * When scrolling down quickly view any particular details like a product image, product name, etc.
+ * This extension will increase conversion rate by encouraging customers to add products to cart or buy now button.
+## 1. How to install Magento 2 sticky add to cart
 ### ✓ Install sticky add to cart via composer (recommend)
 Run the following command in Magento 2 root folder:
 
@@ -45,7 +35,6 @@ You can customize the position of the sticky add to cart appears in the height f
 ## Detail User Guide
 * [Magento 2 Sticky Add To Cart Document](https://docs.alothemes.com/m2/extension/stickycart/)
 
-* [How to use Magento 2 Sticky add to cart free](https://www.youtube.com/watch?v=GjxPFJkxjSo) 
 
 ## Donation
 
