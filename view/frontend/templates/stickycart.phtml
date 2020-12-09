@@ -16,7 +16,7 @@ $helper           = $this->helper('Magepow\Stickycart\Helper\Data');
 $_product         = $block->getProduct();
 $excludeProducts  = $helper->getExcludeProducts();
 $arrayProducts    = explode(',', $excludeProducts);
-if (in_array($_product->getSku(), $arrayProducts))
+if (in_array($_product->getId(), $arrayProducts))
   return;
 if ( !$_product->isSaleable() ){
   return;
