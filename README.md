@@ -1,5 +1,10 @@
 # Magento 2 Sticky add to cart FREE (Magepow Stickycart)
 Magento 2 Sticky add to cart extension by Magepow provides for the product page a convenient stick, help customers can quickly add a product to cart without going back to the top
+
+[![Latest Stable Version](https://poser.pugx.org/magepow/stickycart/v/stable)](https://packagist.org/packages/magepow/stickycart)
+[![Total Downloads](https://poser.pugx.org/magepow/stickycart/downloads)](https://packagist.org/packages/magepow/stickycart)
+[![Daily Downloads](https://poser.pugx.org/magepow/stickycart/d/daily)](https://packagist.org/packages/magepow/stickycart)
+
 ## Details
 **Magento 2 Sticky add to cart Free by Magepow** helps store owners make the cart always visible for easier check out. When a customer scrolls down the page, the extension will help you show the "Add to cart" bar so your customers can quickly add the product to cart or view brief of product detail such as images, price or choose the quantity, no longer need to scroll back to the top, the cart bar is always on visible. Therefore, this extension not only provides customers an extremely convenient shopping experience but also can help you increase sales, and reduce the customer ratio leaving the product or miss their checkout after reading lots of detail (remind and "call to action").
 
@@ -113,8 +118,3 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 * [Market responsive Magento 2 Theme](https://1.envato.market/c/1314680/275988/4415?u=https://themeforest.net/item/market-responsive-magento-2-theme/22997928)
 
 * [Kuteshop responsive Magento 2 Theme](https://1.envato.market/c/1314680/275988/4415?u=https://themeforest.net/item/kuteshop-multipurpose-responsive-magento-1-2-theme/12985435)
-
-[![Latest Stable Version](https://poser.pugx.org/magepow/stickycart/v/stable)](https://packagist.org/packages/magepow/stickycart)
-[![Total Downloads](https://poser.pugx.org/magepow/stickycart/downloads)](https://packagist.org/packages/magepow/stickycart)
-
-
