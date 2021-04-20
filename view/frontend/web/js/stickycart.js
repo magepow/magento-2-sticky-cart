@@ -27,10 +27,10 @@ define([
 				var y = $(this).scrollTop();
 				if (y > scrollHeight) {
 					body.addClass('show-add-cart-bottom');
-					stickyCart.fadeIn("fast");
+					stickyCart.addClass("sticky_show_atc");
 				} else {
 					body.removeClass('show-add-cart-bottom');
-					stickyCart.fadeOut("fast");
+					stickyCart.removeClass("sticky_show_atc");
 				}
 	        });
 
