@@ -102,6 +102,15 @@ define([
 	            spinner.find("input").trigger("change");
 	          });
 	        });
+		$(window).on("scroll", function() {
+			let scrollHeight = $(document).height();
+			let scrollPosition = $(window).height() + $(window).scrollTop();
+			if ((scrollHeight - scrollPosition) / scrollHeight <= 0.05) {
+			    $(".stickyCart").addClass('_disabled');
+			}else{
+			    $(".stickyCart").removeClass('_disabled');
+			}
+		});
       }
     });
   	return $.mage.magepowStickycart;
