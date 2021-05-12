@@ -5,8 +5,9 @@ define([
     'use strict';
     $.widget('mage.magepowStickycart', {
         options: {
-            scrollHeight 	: 0,
-            typeProduct 	: 'simple'
+        	scrollHeight : null,
+            typeProduct  : 'simple',
+            bottomScroll : null
         },
 	    _create: function () {
 	        var options = this.options;
@@ -20,18 +21,22 @@ define([
 	        	var buttonAction = buttonAddToCart;
 	        }
 	        if(!buttonAction.length) return;
-	        var scrollHeight 	= options.scrollHeight ? options.scrollHeight : buttonAction.position().top;
 	        var stickyCart      = $(".stickyCart");
 	        var body 			= $('body');
+	        var scrollHei = options.scrollHeight/100;
 	        $(document).scroll(function() {
 				var y = $(this).scrollTop();
-				if (y > scrollHeight) {
-					body.addClass('show-add-cart-bottom');
-					stickyCart.addClass("sticky_show_atc");
-				} else {
-					body.removeClass('show-add-cart-bottom');
-					stickyCart.removeClass("sticky_show_atc");
+				let scrollHeight = $(document).height();
+				let scrollPosition = $(window).height() + y;
+				if ((scrollHeight - scrollPosition) / scrollHeight <= scrollHei && options.bottomScroll) {
+					  stickyCart.addClass("sticky_show_atc _disabled");
+				      body.removeClass('show-add-cart-bottom');
+				}else{
+				    stickyCart.removeClass("sticky_show_atc _disabled");
+				  	body.addClass('show-add-cart-bottom');
+
 				}
+
 	        });
 
 	        var qtySticky 	= $('#qtySticky');
@@ -102,15 +107,7 @@ define([
 	            spinner.find("input").trigger("change");
 	          });
 	        });
-		$(window).on("scroll", function() {
-			let scrollHeight = $(document).height();
-			let scrollPosition = $(window).height() + $(window).scrollTop();
-			if ((scrollHeight - scrollPosition) / scrollHeight <= 0.05) {
-			    $(".stickyCart").addClass('_disabled');
-			}else{
-			    $(".stickyCart").removeClass('_disabled');
-			}
-		});
+
       }
     });
   	return $.mage.magepowStickycart;
