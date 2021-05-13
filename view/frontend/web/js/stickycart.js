@@ -29,10 +29,10 @@ define([
 				let scrollHeight = $(document).height();
 				let scrollPosition = $(window).height() + y;
 				if ((scrollHeight - scrollPosition) / scrollHeight <= scrollHei && options.bottomScroll) {
-					  stickyCart.addClass("sticky_show_atc");
+					  stickyCart.removeClass("sticky_show_atc");
 				      body.removeClass('show-add-cart-bottom');
 				}else{
-				    stickyCart.removeClass("sticky_show_atc");
+				    stickyCart.addClass("sticky_show_atc");
 				  	body.addClass('show-add-cart-bottom');
 
 				}
