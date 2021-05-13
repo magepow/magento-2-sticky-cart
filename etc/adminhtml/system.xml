@@ -34,10 +34,7 @@
                     <label>Product Ids</label>
                     <comment><![CDATA[Comma-separated]]></comment>
                 </field>
-                <field id="stickyBottom" translate="label comment" type="select" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="40" canRestore="1">
-                    <label>Show/Hide bottom sticky</label>
-                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
+               
             </group>
         </section>
     </system>
