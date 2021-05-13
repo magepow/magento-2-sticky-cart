@@ -7,7 +7,9 @@ define([
         options: {
         	scrollHeight : null,
             typeProduct  : 'simple',
-            bottomScroll : null
+            bottomScroll : null,
+            scrollTop: 0
+
         },
 	    _create: function () {
 	        var options = this.options;
@@ -21,19 +23,23 @@ define([
 	        	var buttonAction = buttonAddToCart;
 	        }
 	        if(!buttonAction.length) return;
+	        var scrollTop 	= options.scrollTop ? options.scrollTop : buttonAction.position().top;
 	        var stickyCart      = $(".stickyCart");
 	        var body 			= $('body');
 	        var scrollHei = options.scrollHeight/100;
 	        $(document).scroll(function() {
 				var y = $(this).scrollTop();
+				console.log(scrollTop);
+				console.log(y);
 				let scrollHeight = $(document).height();
 				let scrollPosition = $(window).height() + y;
-				if ((scrollHeight - scrollPosition) / scrollHeight <= scrollHei && options.bottomScroll) {
-					  stickyCart.removeClass("sticky_show_atc");
-				      body.removeClass('show-add-cart-bottom');
+				if ((scrollHeight - scrollPosition) / scrollHeight >= scrollHei && y > scrollTop) {
+					  stickyCart.addClass("sticky_show_atc");
+				  	  body.addClass('show-add-cart-bottom');
 				}else{
-				    stickyCart.addClass("sticky_show_atc");
-				  	body.addClass('show-add-cart-bottom');
+					stickyCart.removeClass("sticky_show_atc");
+				      body.removeClass('show-add-cart-bottom');
+				    
 
 				}
 
