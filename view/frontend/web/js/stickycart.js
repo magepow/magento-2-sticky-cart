@@ -7,7 +7,6 @@ define([
         options: {
         	scrollHeight : null,
             typeProduct  : 'simple',
-            bottomScroll : null,
             scrollTop: 0
 
         },
@@ -29,8 +28,6 @@ define([
 	        var scrollHei = options.scrollHeight/100;
 	        $(document).scroll(function() {
 				var y = $(this).scrollTop();
-				console.log(scrollTop);
-				console.log(y);
 				let scrollHeight = $(document).height();
 				let scrollPosition = $(window).height() + y;
 				if ((scrollHeight - scrollPosition) / scrollHeight >= scrollHei && y > scrollTop) {

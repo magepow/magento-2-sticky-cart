@@ -30,7 +30,6 @@ $_imageHelper  = $this->helper('Magento\Catalog\Helper\Image');
 $heightScroll  = $helper->getHeightScroll();
 $widthtImage   = $helper->getWidthImage();
 $heightImage   = $helper->getHeightImage();
-$showBottom = $helper->getConfigModule('general/stickyBottom');
 $imageUrl      = $_imageHelper->init($_product, 'product_base_image')
                 ->constrainOnly(TRUE)
                 ->keepAspectRatio(TRUE)
@@ -99,8 +98,7 @@ $stickyData = $this->helper('Magento\Framework\Json\Helper\Data')->jsonEncode($f
             "magepowStickycart": {
             "jsonData":<?php /* @noEscape */ echo $stickyData; ?>,
             "typeProduct": "<?php /* @noEscape */ echo $_product->getTypeId(); ?>",
-            "scrollHeight": <?php   echo $heightScroll; ?>,
-            "bottomScroll": <?php   echo $showBottom; ?>
+            "scrollHeight": <?php   echo $heightScroll; ?>
             }
         }
     }
