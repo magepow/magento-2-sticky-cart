@@ -6,7 +6,7 @@
                 <enabled>1</enabled>
                 <width_image>80</width_image>
                 <height_image>80</height_image>
-                <height_scroll>5</height_scroll>
+                <height_scroll>0</height_scroll>
             </general>
         </magepow_stickycart>
     </default>
