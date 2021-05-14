@@ -5,10 +5,9 @@ define([
     'use strict';
     $.widget('mage.magepowStickycart', {
         options: {
-        	scrollHeight : null,
-            typeProduct  : 'simple',
-            scrollTop: 0
-
+            scrollHeight 	: 0,
+            hiddenBottom 	: true,
+            typeProduct 	: 'simple'
         },
 	    _create: function () {
 	        var options = this.options;
@@ -22,24 +21,20 @@ define([
 	        	var buttonAction = buttonAddToCart;
 	        }
 	        if(!buttonAction.length) return;
-	        var scrollTop 	= options.scrollTop ? options.scrollTop : buttonAction.position().top;
+	        var scrollHeight 	= options.scrollHeight ? options.scrollHeight : buttonAction.position().top;
 	        var stickyCart      = $(".stickyCart");
 	        var body 			= $('body');
-	        var scrollHei = options.scrollHeight/100;
-	        $(document).scroll(function() {
+	        $(window).scroll(function() {
 				var y = $(this).scrollTop();
-				let scrollHeight = $(document).height();
-				let scrollPosition = $(window).height() + y;
-				if ((scrollHeight - scrollPosition) / scrollHeight >= scrollHei && y > scrollTop) {
-					  stickyCart.addClass("sticky_show_atc");
-				  	  body.addClass('show-add-cart-bottom');
-				}else{
+				var hiddenBottom = options.hiddenBottom ? (y + $(this).height() == $(document).height()) : '';
+			
+				if (y > scrollHeight && !hiddenBottom) {
+					body.addClass('show-add-cart-bottom');
+					stickyCart.addClass("sticky_show_atc");
+				} else {
+					body.removeClass('show-add-cart-bottom');
 					stickyCart.removeClass("sticky_show_atc");
-				      body.removeClass('show-add-cart-bottom');
-				    
-
 				}
-
 	        });
 
 	        var qtySticky 	= $('#qtySticky');
@@ -110,7 +105,6 @@ define([
 	            spinner.find("input").trigger("change");
 	          });
 	        });
-
       }
     });
   	return $.mage.magepowStickycart;
