@@ -17,12 +17,19 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     protected $configModule;
 
+    /**
+     * @var \Magento\Framework\Json\Helper\Data
+     */
+    protected $jsonHelper;
+
     public function __construct(
-        \Magento\Framework\App\Helper\Context $context
+        \Magento\Framework\App\Helper\Context $context,
+        \Magento\Framework\Json\Helper\Data $jsonHelper
     )
     {
         parent::__construct($context);
         $this->configModule = $this->getConfig(strtolower($this->_getModuleName()));
+        $this->jsonHelper = $jsonHelper;
     }
 
     public function getConfig($cfg='')
@@ -71,4 +78,25 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         return $this->getConfigModule('general/exclude_products');
     }
+
+    public function getStickyCartConfigJson($product)
+    {   
+        $data = [
+            "typeProduct"   => $product->getTypeId(),
+            "scrollHeight"  => $this->getConfigModule('general/height_scroll'),
+            "hiddenBottom"  => $this->getConfigModule('general/hidden_bottom')
+        ];
+        foreach ($data as $key => $value) {
+            if(is_numeric($value)){
+                $data[$key] = (float) $value;
+                continue;
+            }
+            $value = filter_var($value, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE);
+            if(!is_null($value)){
+                $data[$key] = $value; 
+            }
+        }
+        return $this->jsonHelper->jsonEncode($data);
+    }
+
 }

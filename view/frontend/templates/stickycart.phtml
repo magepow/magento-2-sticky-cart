@@ -27,7 +27,6 @@ if ($_product->getTypeId() == 'bundle'){
   $buttonTitle = __('Customize and Add to Cart');
 }
 $_imageHelper  = $this->helper('Magento\Catalog\Helper\Image');
-$heightScroll  = $helper->getHeightScroll();
 $widthtImage   = $helper->getWidthImage();
 $heightImage   = $helper->getHeightImage();
 $imageUrl      = $_imageHelper->init($_product, 'product_base_image')
@@ -83,23 +82,10 @@ $imageUrl      = $_imageHelper->init($_product, 'product_base_image')
     </div>
   </div>
 </div>
-<?php
-$formData = [
-    'stickyCart'                =>  '.stickyCart',
-    'qtySticky'                 =>  '#qtySticky',
-    'quantity'                  =>  '.quantity',
-    'btnSticky'                 =>  '#btnSticky'
-];
-$stickyData = $this->helper('Magento\Framework\Json\Helper\Data')->jsonEncode($formData);
-?>
 <script type="text/x-magento-init">
     {
         "*": {
-            "magepowStickycart": {
-            "jsonData":<?php /* @noEscape */ echo $stickyData; ?>,
-            "typeProduct": "<?php /* @noEscape */ echo $_product->getTypeId(); ?>",
-            "scrollHeight": <?php   echo $heightScroll; ?>
-            }
+            "magepowStickycart": <?php echo $helper->getStickyCartConfigJson($_product) ?>
         }
     }
 </script>

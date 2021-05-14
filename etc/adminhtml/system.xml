@@ -14,23 +14,28 @@
                     <label><![CDATA[Enabled]]></label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="height_scroll" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10" canRestore="1">
+                <field id="height_scroll" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="20" canRestore="1">
                     <label>Height Scroll</label>
                     <comment><![CDATA[Height from the top of the web page to the appearance 'add to cart bottom' default value 0 will auto]]></comment>
                     <validate>validate-number</validate>
                 </field>
-                <field id="width_image" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="20" canRestore="1">
+                <field id="hidden_bottom" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label><![CDATA[Hidden Bottom End]]></label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Hidden Sticky Cart when scroll to bottom end]]></comment>
+                </field>
+                <field id="width_image" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="40" canRestore="1">
                     <label>Width Image</label>
                     <comment><![CDATA[Width image product]]></comment>
                     <validate>validate-number</validate>
                 </field>
-                <field id="height_image" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="30" canRestore="1">
+                <field id="height_image" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="50" canRestore="1">
                     <label>Height Image</label>
                     <comment><![CDATA[Height image product]]></comment>
                     <validate>validate-number</validate>
                 </field>                
 
-                <field id="exclude_products" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="40" canRestore="1">
+                <field id="exclude_products" translate="label comment" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="60" canRestore="1">
                     <label>Product Ids</label>
                     <comment><![CDATA[Comma-separated]]></comment>
                 </field>
