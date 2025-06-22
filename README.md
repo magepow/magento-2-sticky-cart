@@ -26,6 +26,7 @@ With Magepow Stickycart, when scrolling down, the customer can quickly view any 
 ## 1. Buy it
 [Buy it on Magepow](https://magepow.com/magento-2-sticky-add-to-cart.html)
 
+### Version support Hyva Theme
 [<img src="https://github.com/magepow/magento-2-sticky-cart/blob/main/media/hyva-version.png" width="250" height="100">]([https://magepow.com/magento-2-infinite-scroll.html](https://magepow.com/magento-2-sticky-add-to-cart.html))
 
 ## 2. Sticky add to cart user guide
