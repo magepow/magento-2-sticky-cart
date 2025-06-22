@@ -24,7 +24,9 @@ With Magepow Stickycart, when scrolling down, the customer can quickly view any 
 
 
 ## 1. Buy it
-[Buy it on Magepow](https://magepow.com/magento-sticky-add-to-cart.html)
+[Buy it on Magepow](https://magepow.com/magento-2-sticky-add-to-cart.html)
+
+[<img src="https://github.com/magepow/magento-2-sticky-cart/blob/main/media/hyva-version.png" width="250" height="100">]([https://magepow.com/magento-2-infinite-scroll.html](https://magepow.com/magento-2-sticky-add-to-cart.html))
 
 ## 2. Sticky add to cart user guide
 **Magepow sticky add to cart** provides the customer with a hassle-free shopping experience. The product's function allows the customer to quickly add the product to the cart without scrolling. So your customer can get information about the product quickly. Using configuration options admin can enable/disable sticky bar features at any time. Admin can custom height from header until sticky add to cart appears.
@@ -35,11 +37,11 @@ Go to `Admin Panel > Stores > Settings > Configuration > Magepow > Stickycart`
 Select `Yes` to enable module.
 #### Setting Sticky add to cart
 Go to `Admin Panel > Stores > Settings > Configuration > Magepow > Stickycart`
-![config-module-img](https://github.com/magepow/stickycart/blob/master/media/config.png)
+![config-module-img](https://github.com/magepow/stickycart/blob/main/media/config.png)
 
 You can customize the position of the sticky add to cart appears in the height from the header to the footer.
 ### This Is Result In Frontend
-![result-module-img](https://github.com/magepow/stickycart/blob/master/media/description.gif)
+![result-module-img](https://github.com/magepow/stickycart/blob/main/media/description.gif)
 
 ## Detail User Guide
 * [Magento 2 Sticky Add To Cart Document](https://docs.alothemes.com/m2/extension/stickycart/)
