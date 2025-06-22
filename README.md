@@ -27,7 +27,7 @@ With Magepow Stickycart, when scrolling down, the customer can quickly view any 
 [Buy it on Magepow](https://magepow.com/magento-2-sticky-add-to-cart.html)
 
 ### Version support Hyva Theme
-[<img src="https://github.com/magepow/magento-2-sticky-cart/blob/main/media/hyva-version.png" width="250" height="100">]([https://magepow.com/magento-2-infinite-scroll.html](https://magepow.com/magento-2-sticky-add-to-cart.html))
+[<img src="https://github.com/magepow/magento-2-sticky-cart/blob/main/media/hyva-version.png" width="250" height="100">](https://magepow.com/magento-2-sticky-add-to-cart.html)
 
 ## 2. Sticky add to cart user guide
 **Magepow sticky add to cart** provides the customer with a hassle-free shopping experience. The product's function allows the customer to quickly add the product to the cart without scrolling. So your customer can get information about the product quickly. Using configuration options admin can enable/disable sticky bar features at any time. Admin can custom height from header until sticky add to cart appears.
